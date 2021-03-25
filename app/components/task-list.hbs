@@ -1,0 +1,15 @@
+{{#if @loading}}
+ <div class="list-items">loading</div>>
+{{else if @tasks}}
+  {{#each @tasks as |task|}}
+    <Task
+      @task={{task}}
+      @pin={{fn @pinTask task.id}}
+      @archive={{fn @archiveTask task.id}}
+    />
+  {{/each}}
+{{else}}
+  <div class="list-items">
+    empty
+  </div>
+{{/if}}
