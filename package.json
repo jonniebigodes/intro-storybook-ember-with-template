@@ -26,7 +26,7 @@
     "test:ember": "ember test",
     "storybook": "start-storybook -p 6006 -s dist --ci",
     "storybook-dev": "npm-run-all --continue-on-error --parallel start storybook",
-    "prebuild-storybook": "ember build",
+    "prebuild-storybook": "echo \"Starting prebuild\" && ember build",
     "build-storybook": "build-storybook -s dist"
   },
   "devDependencies": {
